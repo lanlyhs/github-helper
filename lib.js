@@ -2,7 +2,7 @@ const { Octokit, App } = require("octokit");
 const { throttling } = require("@octokit/plugin-throttling");
 const MyOctokit = Octokit.plugin(throttling);
 
-module.exports = new MyOctokit({
+const octokit = new MyOctokit({
     throttle: {
         onRateLimit: (retryAfter, options) => {
             octokit.log.warn(
@@ -23,3 +23,5 @@ module.exports = new MyOctokit({
         },
     },
 });
+
+module.exports = octokit;
