@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@octokit/plugin-throttling": "^3.6.2",
+    "@octokit/plugin-throttling": "^3.7.0",
     "octokit": "^1.7.2"
   }
 }
